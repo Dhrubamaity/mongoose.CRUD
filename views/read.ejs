@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets\style.css">
+</head>
+
+<body>
+    <div style="margin-top: 40px;">
+        <a style="text-decoration: none ;margin-left: 20px; color: rgb(47, 97, 221);" href="/">
+            < Back to home</a>
+    </div>
+    <h2 style="margin-top: 20px;margin-left: 30px;">All Users</h2>
+
+    <div class="users">
+        <% if (users.length > 0){ %>
+            <% users.forEach(function(user){ %>
+                <div class="user">
+                    <div class="img">
+                        <img src="<%=user.imgurl%>" alt="">
+                    </div>
+                    <h4 style="margin-top: 10px;">
+                        <%=user.name%>
+                    </h4>
+                    <p style="color: rgb(178, 178, 178);margin-top:5px ;">
+                        <%=user.email%>
+                    </p>
+                    <div class="option">
+                        <a style=" padding-right: 145px;" href="/update/<%= user._id %>">Update</a>
+                        <a style="color: rgb(216, 25, 25);" href="/delete/<%= user._id %>">Delete</a>
+                    </div>
+                </div>
+        <% }) %>
+                    <% }else{ %>
+                        <p style="margin-top: 20px;margin-left: 30px;">no user yet</p>
+                        <% } %>
+    </div>
+
+
+
+</body>
+
+</html>

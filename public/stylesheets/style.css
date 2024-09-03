@@ -1,0 +1,70 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.92);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+form input{
+    width: 200px;
+    height: 40px;
+    border: none;
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+.button{
+    background-color: rgb(108, 213, 3);
+    width: 125px;
+    font-size: 16px;
+    color: white;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.users{
+    display: flex;
+    flex-wrap: wrap;
+}
+.user{
+    background-color: rgb(35, 34, 34);
+    padding: 10px;
+    margin: 10px;
+    width: 15vw;
+    height: 21vw;
+    border-radius: 7px;
+    transition: transform 0.3s ease-in-out;
+}
+.user:hover{
+    transform: scale(1.1);
+}
+
+.img img{
+    height:270px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+   
+}
+
+.option{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.option a{
+    text-decoration: none;
+    color: rgb(82, 96, 246);
+    font-size: 14px;
+}

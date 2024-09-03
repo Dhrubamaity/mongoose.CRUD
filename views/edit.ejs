@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div style="margin-top: 40px;">
+        <a style="text-decoration: none;margin-left: 30px;color: rgb(83, 83, 231);" href="/read">Read all Users</a>
+    </div>
+    <h2 style="margin-top: 40px;margin-left: 30px;">Update User</h2>
+    <form action="/update/<%= user._id %>" method="post">
+        <input type="text" name="name" placeholder="name" value="<%= user.name %>">
+        <input type="text" name="email" placeholder="email" value="<%= user.email %>">
+        <input type="text" name="imgurl" placeholder="imgurl" value="<%= user.imgurl %>">
+        <input style="background-color: rgb(6, 196, 196);" class="button" type="Submit" value="Update user">  
+    </form>
+</body>
+</html>
